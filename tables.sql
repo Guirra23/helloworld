@@ -1,8 +1,12 @@
+create database cadastro;
+
+use cadastro;
+
 CREATE TABLE `occupation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -13,4 +17,4 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`),
   KEY `fk_pessoas_1_idx` (`id_occupation`),
   CONSTRAINT `fk_users_1` FOREIGN KEY (`id_occupation`) REFERENCES `occupation` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
