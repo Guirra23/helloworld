@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 import random
 nomes = []
+qtd = int(input("Digite o número de jogadores: "))
 cont = 1
-while cont <= 5:
+while cont <= qtd:
     n = [str(x) for x in input("Digite o nome do player : ").split()]
     nomes.append(n)
     cont = cont + 1
